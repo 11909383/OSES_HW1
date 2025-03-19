@@ -16,11 +16,11 @@ def deal_cards():
     # Deal five cards
     hand = [deck.pop() for _ in range(5)]
     
-    # Return the hand (list of 5 cards)
+    # Return the hand
     return hand
 
 def calculate_points(hand):
-    # Map card ranks to their corresponding points
+    # Assign points to cards
     rank_points = {
         '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
         'J': 10, 'Q': 10, 'K': 10, 'A': 11
@@ -31,7 +31,7 @@ def calculate_points(hand):
     
     # Loop through each card in the hand
     for card in hand:
-        # Extract rank and suit
+        # Split rank and suit
         rank, suit = card.split(' of ')
         
         # Add the points for the rank to the corresponding suit's total
