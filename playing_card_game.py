@@ -1,9 +1,15 @@
 import random
 from collections import defaultdict
 
+
+
+
 # Define the ranks and suits in a standard poker deck
 ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+
+
+
 
 # Create a function to deal two random cards
 def deal_cards():
@@ -12,10 +18,11 @@ def deal_cards():
     
     # Shuffle the deck
     random.shuffle(deck)
+
+    
     
     # Deal five cards
     hand = [deck.pop() for _ in range(5)]
-    
     # Return the hand
     return hand
 
@@ -33,6 +40,8 @@ def calculate_points(hand):
     for card in hand:
         # Split rank and suit
         rank, suit = card.split(' of ')
+
+
         
         # Add the points for the rank to the corresponding suit's total
         suit_points[suit] += rank_points[rank]
@@ -41,7 +50,6 @@ def calculate_points(hand):
     highest_points = max(suit_points.values())
     
     return highest_points
-
 # Deal five cards and print the hand
 hand = deal_cards()
 print(f'You were dealt: {", ".join(hand)}')
