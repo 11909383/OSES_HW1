@@ -14,7 +14,7 @@ suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 # Create a function to deal two random cards
 def deal_cards():
     # Create the deck of cards
-    deck = [f'{rank} of {suit}' for rank in ranks for suit in suits]
+        deck = [f'{rank} of {suit}' for rank in ranks for suit in suits]
     
     # Shuffle the deck
     random.shuffle(deck)
@@ -24,12 +24,13 @@ def deal_cards():
     # Deal five cards
     hand = [deck.pop() for _ in range(5)]
     # Return the hand
-    return hand
+    (return hand)
 
 def calculate_points(hand):
     # Assign points to cards
     rank_points = {
-        '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
+     '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
+        
         'J': 10, 'Q': 10, 'K': 10, 'A': 11
     }
     
@@ -52,8 +53,9 @@ def calculate_points(hand):
     return highest_points
 # Deal five cards and print the hand
 hand = deal_cards()
+
 print(f'You were dealt: {", ".join(hand)}')
 
 # Calculate and print the largest sum of points of the same suit
 largest_sum = calculate_points(hand)
-print(f'The largest sum of points from the same suit is: {largest_sum}')
+    print(f'The largest sum of points from the same suit is: {largest_sum}')
